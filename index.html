@@ -3,176 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currículum - Erik Mateo</title>
+    <title>Mi CV Interactivo</title>
     <link rel="stylesheet" href="index.css">
+    <script defer src="index.js"></script>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<div class="container">
-    <div class="tabs">
-        <div class="tab active" onclick="changeTab('es')">Español</div>
-        <div class="tab" onclick="changeTab('en')">English</div>
-    </div>
+    <nav class="sidebar">
+        <a href="index.html" class="nav-item">
+            <img src="home.png" alt="Home">
+        </a>
+        
+        <button class="nav-item" id="btnIdioma" onclick="cambiarIdioma()">
+            <img id="iconoIdioma" src="gb.png" alt="Idioma">
+        </button>
+    </nav>
 
-    <!-- Contenido en Español -->
-    <div id="es" class="content active">
-        <img src="foto.png" alt="Erik Mateo" class="profile-pic">
+    <nav class="rightbar">
+        <a href="https://www.linkedin.com/in/erik-mateo-2944791bb/" target="_blank">
+            <img src="linkedin.png" alt="linkedin">
+        </a>
+        
+        <a href="https://github.com/EMACodex" target="_blank">
+            <img src="github.png" alt="github">
+        </a>
+    </nav>
+
+
+    <div class="container">
+        <div class="perfil-container">
+            <img src="perfil.png" alt="Foto de perfil" class="perfil" onclick="ampliarPerfil()">
+        </div>
+
+        <div class="overlay" id="overlay" onclick="cerrarPerfil()">
+            <img id="perfil-ampliado">
+        </div>
+
         <h1>Erik Mateo</h1>
-        <h2>Mi Perfil</h2>
-        <p>¡Hola! Soy Erik Mateo, un apasionado Desarrollador Web con una sólida formación en el
-            desarrollo de aplicaciones web y una gran vocación por crear experiencias dinámicas en línea.
-            Con experiencia tanto en soporte técnico como en marketing digital, he perfeccionado mis
-            habilidades para construir sitios web atractivos, entendiendo las necesidades de los clientes y
-            las tendencias del mercado.
-            Trabajo con sistemas CMS como Shopify, herramientas de diseño como Figma y Canva, y
-            lenguajes de programación como HTML5, CSS3, JavaScript y Python. Mi nivel profesional de
-            inglés me permite colaborar en proyectos internacionales con facilidad.</p>
+        <p class="subtitulo">Desarrollador Web FullStack</p>
 
-        <div class="section">
-            <h2>Contacto</h2>
-            <p>Ubicación: Sevilla, España</p>
-            <p>Email: <a href="mailto:erikmapdev@gmail.com">erikmapdev@gmail.com</a></p>
-            <p>Teléfono: +34 657 05 13 91</p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/erik-mateo-2944791bb/?locale=es_ES">Perfil</a></p>
+        
+        <div class="blur-container">
+            <div class="menu">
+                <a href="aboutme.html" class="item">
+                    <img src="aboutme.png" alt="Sobre mí">
+                    <p>Sobre mí</p>
+                </a>
+                <a href="work.html" class="item">
+                    <img src="work.png" alt="Experiencia">
+                    <p>Experiencia</p>
+                </a>
+                <a href="education.html" class="item">
+                    <img src="education.png" alt="Formación">
+                    <p>Formación Académica</p>
+                </a>
+                <a href="know.html" class="item">
+                    <img src="know.png" alt="Conocimientos">
+                    <p>Tech Stack</p>
+                </a>
+                <a href="projects.html" class="item">
+                    <img src="proyect.png" alt="Proyectos">
+                    <p>Proyectos</p>
+                </a>
+                <a href="contact.html" class="item">
+                    <img src="contact.png" alt="Contacto">
+                    <p>Contacto</p>
+                </a>
+            </div>
         </div>
+        
 
-        <div class="section">
-            <h2>Experiencia Laboral</h2>
-            <h3>ICON Experiences (01/2024 - 10/2024) - Sevilla, España</h3>
-            <ul>
-                <li>Colaboración en el diseño y desarrollo de la web Icon
-                    Experiences, implementando elementos visuales y diseño de
-                    interfaces en colaboración con diseñadores gráficos.</li>
-                <li>Participación en la creación de una interfaz de usuario
-                    atractiva y funcional para eventos y experiencias de clientes.</li>
-                <li>Uso de Figma para prototipado de interfaces y HTML/CSS
-                    para la implementación del diseño final.</li>
-                <li>Habilidades Adquiridas: Figma, Canva, HTML5, JavaScript, CSS</li>
-            </ul>
-            <h3>Kikifresa (05/2021 - 11/2023) - Sevilla, España</h3>
-            <ul>
-                <li>Creación de la página web personal kikifresa.com, un sitio
-                    dinámico con funcionalidades de blog y tienda online
-                    utilizando HTML5, CSS3, JavaScript y Liquid.</li>
-                <li>Implementación de un diseño responsivo con un enfoque
-                    en la experiencia de usuario (UX) optimizada para
-                    dispositivos móviles.</li>
-                <li>Configuración de bases de datos MySQL para gestionar
-                    productos, usuarios y contenido del blog.</li>
-                <li>Implementación de un sistema básico de administración de
-                    contenido (CMS) para gestionar el inventario y las
-                    publicaciones del blog.</li>
-            </ul>
+        <div id="contenido">
+            <div id="experiencia" class="seccion">
+                <h2>Experiencia</h2>
+                <p>Desarrollador Frontend en XYZ (2022 - Actualidad)</p>
+                <p>Diseñador UI en ABC (2019 - 2022)</p>
+            </div>
+
+            <div id="habilidades" class="seccion">
+                <h2>Habilidades</h2>
+                <ul>
+                    <li>HTML, CSS, JavaScript</li>
+                    <li>React.js, Vue.js</li>
+                    <li>Figma, Photoshop</li>
+                </ul>
+            </div>
+
+            <div id="proyectos" class="seccion">
+                <h2>Proyectos</h2>
+                <p>Portfolio interactivo en React</p>
+                <p>Aplicación web de gestión de tareas</p>
+            </div>
+
+            <div id="contacto" class="seccion">
+                <h2>Contacto</h2>
+                <p>Email: contacto@miemail.com</p>
+                <p>LinkedIn: linkedin.com/in/minombre</p>
+            </div>
         </div>
-
-        <div class="section">
-            <h2>Formación Académica</h2>
-            <p>I.E.S Hermanos Machado (2024 - 2025) - Grado Superior en Desarrollo de Aplicaciones Web</p>
-            <p>CEI Escuela de Diseño y Marketing (2023 - 2024) - Grado Superior en Desarrollo de Aplicaciones Web</p>
-            <p>Consultoria.IO (2022 - 2023) - Grado en Marketing y Ventas</p>
-        </div>
-
-        <div class="section">
-            <h2>Habilidades</h2>
-            <p>Liderazgo, Creatividad, Productividad y Comunicación</p>
-        </div>
-
-        <div class="section">
-            <h2>Lenguajes</h2>
-            <p>Ingles - B2</p>
-            <p>Castellano - Nativo</p>
-        </div>
-
-        <div class="section">
-            <h2>Certificaciones</h2>
-            <p>HTML5, CSS3, JavaScript, Python, Scrum Master</p>
-        </div>
-
-        <div class="section">
-            <h2>Portafolio de Proyectos</h2>
-            <p><a href="https://iconexperiences.es/">Icon Experiences</a></p>
-            <p><a href="https://kikifresa.com">Kikifresa</a></p>
-            <p><a href="https://webworks-design.vercel.app/">WebWorks</a></p>
-            <p><a href="https://cverikmap.vercel.app/">CV</a></p>
-            <p><a href="https://linaresdeportivo.vercel.app/">Linares Deportivo</a></p>
-        </div>
-
     </div>
 
-    <!-- Contenido en Inglés -->
-    <div id="en" class="content">
-        <img src="foto.png" alt="Erik Mateo" class="profile-pic">
-        <h1>Erik Mateo</h1>
-        <h2>My Profile</h2>
-        <p>Hello! I am Erik Mateo, a passionate Web Developer with a strong background in web application development 
-            and a great vocation for creating dynamic online experiences.  
-            With experience in both technical support and digital marketing, I have refined my skills to build attractive 
-            websites, understanding client needs and market trends.  
-            I work with CMS systems like Shopify, design tools like Figma and Canva, and programming languages such as 
-            HTML5, CSS3, JavaScript, and Python. My professional level of English allows me to collaborate easily 
-            on international projects.</p>
-    
-        <div class="section">
-            <h2>Contact</h2>
-            <p>Location: Seville, Spain</p>
-            <p>Email: <a href="mailto:erikmapdev@gmail.com">erikmapdev@gmail.com</a></p>
-            <p>Phone: +34 657 05 13 91</p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/erik-mateo-2944791bb/">Profile</a></p>
-        </div>
-    
-        <div class="section">
-            <h2>Work Experience</h2>
-            <h3>ICON Experiences (01/2024 - 10/2024) - Seville, Spain</h3>
-            <ul>
-                <li>Collaborated in the design and development of the Icon Experiences website, implementing visual 
-                    elements and interface design in collaboration with graphic designers.</li>
-                <li>Participated in the creation of an attractive and functional user interface for client events and experiences.</li>
-                <li>Used Figma for interface prototyping and HTML/CSS for final design implementation.</li>
-                <li>Skills Acquired: Figma, Canva, HTML5, JavaScript, CSS</li>
-            </ul>
-            <h3>Kikifresa (05/2021 - 11/2023) - Seville, Spain</h3>
-            <ul>
-                <li>Created the personal website kikifresa.com, a dynamic site with blog and online store functionalities using 
-                    HTML5, CSS3, JavaScript, and Liquid.</li>
-                <li>Implemented a responsive design with a focus on user experience (UX) optimized for mobile devices.</li>
-                <li>Configured MySQL databases to manage products, users, and blog content.</li>
-                <li>Implemented a basic content management system (CMS) to manage inventory and blog posts.</li>
-            </ul>
-        </div>
-    
-        <div class="section">
-            <h2>Academic Background</h2>
-            <p>I.E.S Hermanos Machado (2024 - 2025) - Degree in Web Application Development</p>
-            <p>CEI School of Design and Marketing (2023 - 2024) - Degree in Web Application Development</p>
-            <p>Consultoria.IO (2022 - 2023) - Degree in Marketing and Sales</p>
-        </div>
-    
-        <div class="section">
-            <h2>Skills</h2>
-            <p>Leadership, Creativity, Productivity, and Communication</p>
-        </div>
-    
-        <div class="section">
-            <h2>Languages</h2>
-            <p>English - B2</p>
-            <p>Spanish - Native</p>
-        </div>
-    
-        <div class="section">
-            <h2>Certifications</h2>
-            <p>HTML5, CSS3, JavaScript, Python, Scrum Master</p>
-        </div>
+    <footer>
+        <a href="curriculum.pdf" download="Erik_Mateo_CV.pdf" class="btn-descargar" id="download">Descargar CV</a>
+    </footer>
 
-        <div class="section">
-            <h2>Project Portfolio</h2>
-            <p><a href="https://iconexperiences.es/">Icon Experiences</a></p>
-            <p><a href="https://kikifresa.com">Kikifresa</a></p>
-            <p><a href="https://webworks-design.vercel.app/">WebWorks</a></p>
-            <p><a href="https://cverikmap.vercel.app/">CV</a></p>
-            <p><a href="https://linaresdeportivo.vercel.app/">Linares Deportivo</a></p>
-        </div>
-
-    </div>
-</div>
-<script src="index.js" defer></script>
 </body>
 </html>
