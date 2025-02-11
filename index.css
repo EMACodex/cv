@@ -1,10 +1,24 @@
 body {
+    position: relative;
     background: url('fondo.jpg') no-repeat center center/cover;
     background-size: cover;
     background-attachment: fixed;
     font-family: Arial, sans-serif;
     text-align: center;
     color: rgb(255, 255, 255);
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Capa semi-transparente */
+    backdrop-filter: blur(10px); /* Aplicar desenfoque */
+    -webkit-backdrop-filter: blur(10px); /* Soporte para Safari */
+    z-index: -1; /* Asegura que esté detrás de todo el contenido */
 }
 
 .perfil-container {
@@ -108,20 +122,12 @@ a {
     100% { text-shadow: 0 0 5px #00ffea, 0 0 10px #00e1ff, 0 0 20px #00e1ff; }
 }
 
-h1, .subtitulo {
+.container h1 {
     font-size: 2.5em;
     color: #ffffff; /* Color neón */
     text-shadow: 0 0 5px #00ffea, 0 0 10px #00e1ff, 0 0 20px #00e1ff, 0 0 40px #0094ff;
     animation: glow 1.5s infinite alternate;
 }
-
-h2, h3, h4 {
-    font-size: 1.5em;
-    color: #ffffff; /* Color neón */
-    text-shadow: 0 0 5px #00ffea, 0 0 10px #00e1ff, 0 0 20px #00e1ff, 0 0 40px #0094ff;
-    animation: glow 1.5s infinite alternate;
-}
-
 
 html, body {
     height: 100%;
@@ -130,7 +136,7 @@ html, body {
 }
 
 .container {
-    margin-top: 10%;
+    margin-top: 0%;
 }
 
 .container2 {
@@ -141,7 +147,7 @@ html, body {
 .blur-container {
     position: absolute;
     z-index: 1;
-    top: 90%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 400px;
@@ -177,15 +183,6 @@ html, body {
 .item img {
     width: 60px;
     height: 60px;
-    filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.8)); /* Efecto neón */
-}
-
-/* 📌 Estilo del texto debajo de los iconos */
-label, p, .item p {
-    margin-top: 5px;
-    color: white;
-    font-size: 14px;
-    font-weight: bold;
     filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.8)); /* Efecto neón */
 }
 
@@ -258,7 +255,7 @@ label, p, .item p {
 /* Ajuste para pantallas grandes */
 @media (min-width: 768px) {
     .blur-container4 {
-        margin-top: 150px; /* Aún más abajo en pantallas grandes */
+        margin-top: 100px; /* Aún más abajo en pantallas grandes */
     }
 }
 
@@ -436,4 +433,100 @@ footer a {
     color: white;
     font-size: 1.5em;
     margin: 0 10px;
+}
+
+.blur-container7 {
+    position: absolute;
+    z-index: 1;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+    backdrop-filter: blur(10px); /* Efecto borroso */
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blur-container8 {
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+    backdrop-filter: blur(10px); /* Efecto borroso */
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blur-container9{
+    position: absolute;
+    z-index: 1;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+    backdrop-filter: blur(10px); /* Efecto borroso */
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blur-container10 {
+    position: absolute;
+    z-index: 1;
+    top: 120%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+    backdrop-filter: blur(10px); /* Efecto borroso */
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blur-container11 {
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+    backdrop-filter: blur(10px); /* Efecto borroso */
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blur-container12 {
+    position: absolute;
+    z-index: 1;
+    top: 110%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+    backdrop-filter: blur(10px); /* Efecto borroso */
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

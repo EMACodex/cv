@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Mí</title>
     <link rel="stylesheet" href="index.css">
+    <script defer src="aboutme.js"></script>
     <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
@@ -28,23 +29,43 @@
     </nav>
 
     <div class="container" id="contenedor">
-        <h1>Sobre Mí</h1>
+        <h2 id="titulo">Sobre Mí</h2>
     </div>
 
     <div class="blur-container2">
-        <h2>Formación Académica</h2>
-        <p><strong>Técnico superior en Desarrollo de Aplicaciones Web</strong></p>
-        <p>I.E.S Hermanos Machado</p>
+        <h2 id="formacion">Formación Académica</h2>
+        <p><strong id="grado">Técnico superior en Desarrollo de Aplicaciones Web</strong></p>
+        <p id="instituto">I.E.S Hermanos Machado</p>
 
-        <h3>Lenguajes</h3>
-        <p><strong>B2 Cambridge</strong></p>
+        <h3 id="idiomas">Lenguajes</h3>
+        <p id="nivelIngles"><strong>B2 Cambridge</strong></p>
 
-        <h3>Certificaciones</h3>
-        <p>Django, Postgre SQL, Docker, AWS, Scrum Master</p>
+        <h3 id="certificacionesTitulo">Certificaciones</h3>
+        <p id="certificaciones">Django, Postgre SQL, Docker, AWS, Scrum Master</p>
     </div>
 
-    <script defer src="aboutme.js"></script>
-
+    <div class="blur-container7">
+        <div class="menu">
+            <a href="aboutme.html" class="item">
+                <img src="aboutme.png" alt="Sobre mí">
+            </a>
+            <a href="work.html" class="item">
+                <img src="work.png" alt="Experiencia">
+            </a>
+            <a href="education.html" class="item">
+                <img src="education.png" alt="Formación">
+            </a>
+            <a href="know.html" class="item">
+                <img src="know.png" alt="Conocimientos">
+            </a>
+            <a href="projects.html" class="item">
+                <img src="proyect.png" alt="Proyectos">
+            </a>
+            <a href="contact.html" class="item">
+                <img src="contact.png" alt="Contacto">
+            </a>
+        </div>
+    </div>
 
 </body>
 </html>
