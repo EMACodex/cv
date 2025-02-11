@@ -60,7 +60,7 @@ a {
 }
 
 .sidebar {
-    position: absolute; /* Se mueve con el scroll */
+    position: fixed; /* Se mueve con el scroll */
     top: 65%;
     left: 1%;
     transform: translateY(-50%); /* Centra verticalmente */
@@ -100,48 +100,6 @@ a {
 .nav-item:hover img {
     transform: scale(1.2);
 }
-
-.rightbar {
-    position: absolute; /* Se mueve con el scroll */
-    top: 65%;
-    right: 1%; /* Ubicada en la parte derecha */
-    transform: translateY(-50%); /* Centra verticalmente */
-    transition: right 0.3s ease-in-out;
-    width: 60px; /* Ancho de la barra */
-    background: linear-gradient(to bottom, #054f62, #00152a); /* Fondo degradado */
-    padding: 10px 20px;
-    border-radius: 15px; /* Bordes redondeados */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* 📌 Elementos dentro de la barra */
-.rightbar a {
-    width: 60px;
-    height: 60px;
-    margin: 15px 0;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.2s ease-in-out;
-}
-
-/* 📌 Iconos dentro de la barra */
-.rightbar a img {
-    width: 40px;
-    height: 40px;
-    transition: transform 0.2s ease-in-out;
-}
-
-/* 📌 Efecto hover */
-.rightbar a:hover img {
-    transform: scale(1.2);
-}
-
 
 
 @keyframes glow {
