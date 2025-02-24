@@ -6,6 +6,7 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     color: rgb(255, 255, 255);
+    padding-bottom: 80px;
 }
 
 body::before {
@@ -24,7 +25,7 @@ body::before {
 .perfil-container {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .perfil {
@@ -73,21 +74,105 @@ a {
     color: inherit; /* Mantiene el color del texto */
 }
 
-.sidebar {
-    position: fixed; /* Se mueve con el scroll */
-    top: 65%;
-    left: 1%;
-    transform: translateY(-50%); /* Centra verticalmente */
-    transition: left 0.3s ease-in-out;
-    width: 60px; /* Ancho de la barra */
-    background: linear-gradient(to bottom, #054f62, #00152a); /* Fondo degradado */
+.sidebar0 {
+    position: absolute;
+    bottom: -160px; /* Mueve la barra más abajo */
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(to right, #054f62, #00152a);
     padding: 10px 20px;
-    border-radius: 15px; /* Bordes redondeados */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 15px 15px 0 0;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.3);
     z-index: 1000;
 }
 
+.sidebar {
+    position: fixed;
+    bottom: 0px; /* Mueve la barra más abajo */
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(to right, #054f62, #00152a);
+    padding: 10px 20px;
+    border-radius: 15px 15px 0 0;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
 
+.sidebar2 {
+    position: fixed;
+    bottom: 0px; /* Mueve la barra más abajo */
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(to right, #054f62, #00152a);
+    padding: 10px 20px;
+    border-radius: 15px 15px 0 0;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+
+}
+
+.sidebar3 {
+    position: fixed;
+    bottom: 0px; /* Mueve la barra más abajo */
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(to right, #054f62, #00152a);
+    padding: 10px 20px;
+    border-radius: 15px 15px 0 0;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+
+}
+
+.sidebar5 {
+    position: fixed;
+    bottom: 0px; /* Mueve la barra más abajo */
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(to right, #054f62, #00152a);
+    padding: 10px 20px;
+    border-radius: 15px 15px 0 0;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding-bottom: 60px; /* Espacio ajustado para móviles */
+    }
+
+    .sidebar {
+        width: 100%;
+        border-radius: 0;
+        padding: 10px;
+        gap: 5px;
+    }
+
+    .sidebar .nav-item img {
+        width: 30px;
+        height: 30px;
+    }
+}
 /* 📌 Elementos dentro de la barra */
 .nav-item {
     width: 60px;
@@ -136,18 +221,24 @@ html, body {
 }
 
 .container {
-    margin-top: 0%;
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos se apilen en columna */
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center; /* Alinea los elementos dentro del contenedor */
+    text-align: center; /* Asegura que el texto dentro esté centrado */
+    margin-bottom: 20px;
 }
 
 .container2 {
-    margin-top: 0%;
+    max-height: 80vh; /* Ajusta según sea necesario */
+    overflow: hidden; 
 }
 
 /* 📌 Estilo del contenedor borroso */
 .blur-container {
     position: absolute;
     z-index: 1;
-    top: 80%;
+    top: 85%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 400px;
@@ -159,6 +250,51 @@ html, body {
     justify-content: center;
     align-items: center;
 }
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px; /* Añadir espacio alrededor */
+    }
+
+    .perfil-container img {
+        width: 120px; /* Reducir el tamaño de la imagen de perfil */
+        height: 120px;
+    }
+
+    .blur-container {
+        width: 90%; /* Reducir el ancho en móviles */
+        height: auto; /* Permitir ajuste de altura */
+        padding: 15px; /* Espaciado interno */
+        top: 75%; /* Ajustar posición */
+    }
+
+    .menu {
+        display: flex;
+        flex-wrap: wrap; /* Permitir que los elementos se acomoden */
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .menu .item {
+        width: 45%; /* Hacer que los elementos ocupen más espacio */
+        text-align: center;
+    }
+
+    .menu .item img {
+        width: 40px; /* Reducir los iconos */
+        height: 40px;
+    }
+
+    .subtitulo {
+        font-size: 1.2rem; /* Reducir tamaño del subtítulo */
+    }
+
+    .btn-descargar {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
 
 /* 📌 Estilo del menú de iconos */
 .menu {
@@ -193,27 +329,25 @@ html, body {
 
 /* 📌 Estilos para el cuadro borroso */
 .blur-container2 {
-    background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
-    backdrop-filter: blur(10px); /* Efecto borroso */
-    border-radius: 15px; /* Bordes redondeados */
-    padding: 20px; /* Espaciado interno */
-    margin: 20px auto; /* Centrado con margen */
-    width: 80%; /* Más ancho */
-    max-width: 800px; /* Tamaño máximo */
-    color: white; /* Texto en blanco */
+    width: 80%;
+    max-width: 600px;
+    padding: 10px;
+    margin: 0px auto; /* Centrar sin dejar espacios excesivos */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
     text-align: center;
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Borde sutil */
 }
+
 
 /* 📌 Mejorar el tamaño de los títulos */
 .blur-container2 h2 {
     font-size: 24px;
-    margin-bottom: 15px;
 }
 
 .blur-container2 p {
     font-size: 18px;
-    margin-bottom: 10px;
+
 }
 
 
@@ -238,6 +372,8 @@ html, body {
     border-radius: 10px; /* Bordes redondeados para la imagen */
 }
 
+
+
 /* Estilo del contenedor borroso */
 .blur-container4 {
     background: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
@@ -250,6 +386,10 @@ html, body {
     margin: 100px auto; /* Mayor margen superior para bajarlo */
     text-align: center; /* Centra el texto dentro */
     position: relative; /* Asegura que no se superponga con otros elementos */
+    max-height: 70vh; /* Evita que el contenido sea muy alto */
+    overflow: hidden; /* Si hay más contenido, ocúltalo */
+
+
 }
 
 /* Ajuste para pantallas grandes */
@@ -258,6 +398,8 @@ html, body {
         margin-top: 100px; /* Aún más abajo en pantallas grandes */
     }
 }
+
+
 
 /* Estilo del texto dentro del contenedor */
 .blur-container4 p {
@@ -397,8 +539,7 @@ form {
     flex-direction: column;
     max-width: 600px;
     margin: auto;
-    margin-top: 50px;
-    padding-top: 50px;
+
 }
 
 input, textarea {
@@ -435,90 +576,12 @@ footer a {
     margin: 0 10px;
 }
 
-.blur-container7 {
-    position: absolute;
-    z-index: 1;
-    top: 90%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 400px;
-    height: 300px;
-    background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
-    backdrop-filter: blur(10px); /* Efecto borroso */
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 
 .blur-container8 {
     position: absolute;
     z-index: 1;
     top: 100%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 400px;
-    height: 300px;
-    background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
-    backdrop-filter: blur(10px); /* Efecto borroso */
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.blur-container9{
-    position: absolute;
-    z-index: 1;
-    top: 95%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 400px;
-    height: 300px;
-    background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
-    backdrop-filter: blur(10px); /* Efecto borroso */
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.blur-container10 {
-    position: absolute;
-    z-index: 1;
-    top: 120%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 400px;
-    height: 300px;
-    background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
-    backdrop-filter: blur(10px); /* Efecto borroso */
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.blur-container11 {
-    position: absolute;
-    z-index: 1;
-    top: 100%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 400px;
-    height: 300px;
-    background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
-    backdrop-filter: blur(10px); /* Efecto borroso */
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.blur-container12 {
-    position: absolute;
-    z-index: 1;
-    top: 110%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 400px;

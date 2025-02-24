@@ -23,7 +23,7 @@ let traducciones = {
         "grado": "Técnico superior en Desarrollo de Aplicaciones Web",
         "instituto": "I.E.S Hermanos Machado",
         "idiomas": "Lenguajes",
-        "nivelIngles": "B2 Cambridge",
+        "nivelIngles": "B2 Cambridge Ingles",
         "certificacionesTitulo": "Certificaciones",
         "certificaciones": "Django, PostgreSQL, Docker, AWS, Scrum Master"
     },
@@ -33,7 +33,7 @@ let traducciones = {
         "grado": "Higher Technician in Web Application Development",
         "instituto": "I.E.S Hermanos Machado",
         "idiomas": "Languages",
-        "nivelIngles": "B2 Cambridge",
+        "nivelIngles": "B2 Cambridge English",
         "certificacionesTitulo": "Certifications",
         "certificaciones": "Django, PostgreSQL, Docker, AWS, Scrum Master"
     }
