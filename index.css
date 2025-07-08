@@ -617,18 +617,24 @@ footer a {
   }
 }
 
+/* Para pantallas con altura menor a 700px */
 @media (max-height: 700px) {
   .blur-container {
     position: relative !important;
     top: auto !important;
     left: auto !important;
     transform: none !important;
-    margin: 20px auto 30px auto; /* deja hueco abajo */
+    margin: 20px auto 30px auto; /* ya tenías esto */
   }
 
   .btn-descargar {
     position: relative;
-    z-index: 2; /* siempre encima del blur */
-    margin: 0 auto 40px; /* centrado y con espacio */
+    z-index: 2;
+    margin: 0 auto 40px; /* espacio antes de la sidebar */
+  }
+
+  /* Esto empuja todo el contenido por encima de la sidebar */
+  body {
+    padding-bottom: 120px; /* ajusta según la altura de tu sidebar */
   }
 }
