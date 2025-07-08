@@ -616,3 +616,19 @@ footer a {
     font-size: 2em;
   }
 }
+
+@media (max-height: 700px) {
+  .blur-container {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    margin: 20px auto 30px auto; /* deja hueco abajo */
+  }
+
+  .btn-descargar {
+    position: relative;
+    z-index: 2; /* siempre encima del blur */
+    margin: 0 auto 40px; /* centrado y con espacio */
+  }
+}
